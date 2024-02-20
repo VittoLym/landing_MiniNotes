@@ -14,7 +14,7 @@ function donwloadApk(){
   <main>
     <img id="img" src="../assets/image/mockup_mininote.png" alt="">
     <article >
-      <h1 class="kanit-medium">Mini Notes</h1>
+      <h1 class="kanit-medium">Mini Notes<span>.Beta</span></h1>
       <p>
         The minimalist notes app offers a simple and elegant note-taking experience, with a distraction-free interface.
       </p>
@@ -37,6 +37,9 @@ main{
     font-family: "kanit", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+span{
+    font-size: .9rem;
 }
 #img{
   height: 80vh;
