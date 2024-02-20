@@ -1,6 +1,30 @@
 <script setup>
 import { RouterLink} from 'vue-router'
+import { onMounted, onBeforeUnmount ,ref } from 'vue';
+import MyNav from './MyNav.vue';
+
 import Img from '@/assets/image/vittonesa.jpeg'
+
+
+const anchoTotal = ref(window.innerWidth);
+const view = ref( false)
+function changeView(){
+  anchoTotal.value = window.innerWidth;
+  if(anchoTotal.value <= 800){
+    view.value = true
+  }
+  if(anchoTotal.value >= 800){
+    view.value = false
+  }
+}
+
+onMounted(()=>{
+  window.addEventListener('resize', changeView)
+})
+
+onBeforeUnmount(() =>{
+  window.removeEventListener('resize', changeView)
+})
 
 function dw(){
     let nc = document.createElement('a');
@@ -9,6 +33,17 @@ function dw(){
     nc.target = '_blank'
     nc.click()
     console.log('se descargo')
+}
+function showNav(){
+    console.log(view.value)
+    if(view.value === true){
+        console.log('gis')
+        view.value = false
+    }
+    else{
+        console.log('hwuei')
+        view.value = true
+    }
 }
 </script>
 <template>
@@ -20,7 +55,9 @@ function dw(){
             <router-link to="/support">Support</router-link>
             <router-link class="download" to="/" @click="dw">Download</router-link>
         </ul>
+        <svg @click="showNav" fill="#fff" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1920 1468.412v112.94H0v-112.94h1920Zm0-564.706v112.941H0V903.706h1920ZM1920 339v112.941H0V339h1920Z" fill-rule="evenodd"></path> </g></svg>
     </nav>
+        <MyNav  :view="view"/>
 </template>
 <style scoped>
 .kanit-medium {
@@ -28,7 +65,11 @@ function dw(){
     font-weight: 500;
     font-style: normal;
 }
+svg{
+    display: none;
+}
 nav{
+    position: relative;
     height: 10vh;
     background: var(--color-background);
     color: var(--color-heading);
@@ -39,6 +80,7 @@ nav{
     box-shadow:0 0 5px var(--color-border);
     align-items: center;
     padding: 0 3.5rem;
+    z-index: 300;
 }
 h1{
     margin: 0;
@@ -83,5 +125,23 @@ ul a:hover{
 .download:hover{
     background-color: var(--color-heading);
     color: var(--color-bc-text);
+}
+
+
+@media screen and (max-width: 576px) {
+    nav{
+        padding: 1rem 0;
+        justify-content: end;
+    }
+    h1{
+        margin-right: 3.5rem;
+    }
+    ul{
+        display: none;
+    }
+    svg{
+        display: block;
+        margin-right: 1.3rem;
+    }
 }
 </style>

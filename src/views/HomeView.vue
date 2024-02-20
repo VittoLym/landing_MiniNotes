@@ -8,6 +8,7 @@ function donwloadApk(){
     nc.click()
     console.log('se descargo')
 }
+
 </script>
 
 <template>
@@ -57,6 +58,7 @@ article{
 }
 h1{
   margin: 0;
+  margin-top: 200vh;
   font-size: 3rem;
   color: var(--color-heading);
   width: 80%;
