@@ -17,8 +17,8 @@ const router = createRouter({
       component: () => MyAboutUsVueView
     },
     {
-      path: '/contact',
-      name: 'Contact',
+      path: '/support',
+      name: 'Support',
       component: () => MyContactView
     }
   ]

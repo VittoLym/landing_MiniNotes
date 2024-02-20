@@ -1,5 +1,15 @@
 <script setup>
 import { RouterLink} from 'vue-router'
+import Img from '@/assets/image/vittonesa.jpeg'
+
+function dw(){
+    let nc = document.createElement('a');
+    nc.href = Img
+    nc.download = 'vittonessa.jpeg'
+    nc.target = '_blank'
+    nc.click()
+    console.log('se descargo')
+}
 </script>
 <template>
     <nav>
@@ -7,8 +17,8 @@ import { RouterLink} from 'vue-router'
         <ul class="kanit-medium">
             <router-link to="/">Home</router-link>
             <router-link to="/about">About Us</router-link>
-            <router-link to="/support">Contact</router-link>
-            <router-link class="download" to="/">Download</router-link>
+            <router-link to="/support">Support</router-link>
+            <router-link class="download" to="/" @click="dw">Download</router-link>
         </ul>
     </nav>
 </template>

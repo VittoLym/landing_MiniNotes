@@ -1,4 +1,13 @@
 <script setup>
+import Img from '@/assets/image/vittonesa.jpeg'
+function donwloadApk(){
+    let nc = document.createElement('a');
+    nc.href = Img
+    nc.download = 'vittonessa.jpeg'
+    nc.target = '_blank'
+    nc.click()
+    console.log('se descargo')
+}
 </script>
 
 <template>
@@ -15,7 +24,7 @@
       <p>
         It allows users to quickly capture ideas and organize them intuitively with tags and categories.
       </p>
-      <button class="kanit-medium">Download</button>
+      <button class="kanit-medium" @click="donwloadApk">Download</button>
     </article>
   </main>
 </template>
