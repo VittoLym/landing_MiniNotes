@@ -3,7 +3,7 @@
 </script>
 <template>
     <main>
-      <img id="img" src="../assets/image/mockup_mininote.png" alt="">
+      <img id="img" src="../assets/image/mockup2.png" alt="">
       <article id="article">
         <h1 class="kanit-medium">Mini Notes<span>.Beta</span></h1>
         <p>
