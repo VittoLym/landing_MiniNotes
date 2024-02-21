@@ -58,7 +58,6 @@ article{
 }
 h1{
   margin: 0;
-  margin-top: 200vh;
   font-size: 3rem;
   color: var(--color-heading);
   width: 80%;
