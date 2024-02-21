@@ -1,6 +1,22 @@
 <script setup>
-    const prop = defineProps(['view'])
-    console.log(prop.view)
+import { onUpdated } from 'vue';
+const prop = defineProps(['view'])
+console.log(prop.view)
+const uwu = () =>{
+    
+    if(prop.view === true){
+        console.log('chau')
+        document.body.classList.add('scroll-lock')
+    }
+    else{
+        console.log('hola')
+        document.body.classList.remove('scroll-lock')
+    }
+}
+onUpdated(()=>{
+    console.log('jshkaj')
+    window.addEventListener('click', uwu)
+})
 </script>
 <template>
     <section :class="prop.view ? 'down' : 'up'">
@@ -13,6 +29,7 @@
     </section>
 </template>
 <style scoped>
+
 section{
     position: relative;
     z-index: 100;
