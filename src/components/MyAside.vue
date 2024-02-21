@@ -28,6 +28,7 @@ article{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 5vh;
 }
 h1{
     width: 80%;
