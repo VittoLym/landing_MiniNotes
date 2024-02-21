@@ -32,10 +32,11 @@ onUpdated(()=>{
 <style scoped>
 
 section{
-    position: relative;
+    position: absolute;
     z-index: 100;
     width: 100%;
     transition: all 1s ease;
+    background-color: var(--color-background);
 }
 ul{
     height: 60vh;
