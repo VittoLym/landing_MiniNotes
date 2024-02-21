@@ -7,13 +7,13 @@
       <article id="article">
         <h1 class="kanit-medium">About Us</h1>
         <p>
+            Mini Notes was born from the idea of ​​offering a minimalist notes app that is easy to use, yet powerful in its functionality.        
+        </p>
+        <p>
             Staff Lym is a passionate team of designers and developers committed to creating simple and effective tools to improve your productivity.
         </p>
         <p>
             We strive to provide you with intuitive solutions that integrate seamlessly into your everyday life.        
-        </p>
-        <p>
-            Mini Notes was born from the idea of ​​offering a minimalist notes app that is easy to use, yet powerful in its functionality.        
         </p>
     </article>
     </main>
