@@ -5,7 +5,7 @@
     <main>
       <img id="img" src="../assets/image/mockup2.png" alt="">
       <article id="article">
-        <h1 class="kanit-medium">Mini Notes<span>.Beta</span></h1>
+        <h1 class="kanit-medium">About Us</h1>
         <p>
           The minimalist notes app offers a simple and elegant note-taking experience, with a distraction-free interface.
         </p>
@@ -15,7 +15,6 @@
         <p>
           It allows users to quickly capture ideas and organize them intuitively with tags and categories.
         </p>
-        <button class="kanit-medium" @click="donwloadApk">Download</button>
       </article>
     </main>
 </template>

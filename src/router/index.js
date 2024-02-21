@@ -14,12 +14,12 @@ const router = createRouter({
     {
       path: '/about',
       name: 'About',
-      component: () => MyAboutUsVueView
+      component: MyAboutUsVueView
     },
     {
       path: '/support',
       name: 'Support',
-      component: () => MyContactView
+      component: MyContactView
     }
   ]
 })
