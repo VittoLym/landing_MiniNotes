@@ -2,6 +2,15 @@
 import { onMounted, onBeforeUnmount} from 'vue';
 const prop = defineProps(['view'])
 console.log(prop.view)
+const dw = () =>{
+    let nc = document.createElement('a');
+    nc.href = '@/assets/app-release.apk'
+    nc.download = 'Mini Notes.apk'
+    nc.target = '_blank'
+    nc.click()
+    console.log('se descargo')
+}
+
 const uwu = () =>{
     if(prop.view === true){
         document.body.classList.add('scroll-lock')

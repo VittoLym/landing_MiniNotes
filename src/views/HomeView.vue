@@ -1,13 +1,12 @@
 <script setup>
 import { onBeforeMount,onMounted, ref } from 'vue';
-import Img from '@/assets/image/vittonesa.jpeg'
 import MyAside from '@/components/MyAside.vue';
 const mobile = ref(null)
 
 function donwloadApk(){
     let nc = document.createElement('a');
-    nc.href = Img
-    nc.download = 'vittonessa.jpeg'
+    nc.href = '@/assets/app-release.apk'
+    nc.download = 'Mini Notes.apk'
     nc.target = '_blank'
     nc.click()
     console.log('se descargo')

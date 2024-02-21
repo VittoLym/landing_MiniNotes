@@ -3,14 +3,12 @@ import { ref } from 'vue';
 import { RouterLink} from 'vue-router'
 import MyNav from './MyNav.vue';
 
-import Img from '@/assets/image/vittonesa.jpeg'
-
 const view = ref(false)
 
 function dw(){
     let nc = document.createElement('a');
-    nc.href = Img
-    nc.download = 'vittonessa.jpeg'
+    nc.href = '../assets/app-release.apk'
+    nc.download = 'Mini Notes.apk'
     nc.target = '_blank'
     nc.click()
     console.log('se descargo')
