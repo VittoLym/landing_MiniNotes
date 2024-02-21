@@ -1,26 +1,27 @@
 <script setup>
 import { onUpdated } from 'vue';
 const prop = defineProps(['view'])
-console.log(prop.view)
 const uwu = () =>{
     
     if(prop.view === true){
-        console.log('chau')
         document.body.classList.add('scroll-lock')
     }
     else{
-        console.log('hola')
         document.body.classList.remove('scroll-lock')
     }
 }
+const showDinamic = () => {
+    const sect = window.document.getElementById('sect')
+    sect.classList.remove('down')
+    sect.classList.add('up')
+}
 onUpdated(()=>{
-    console.log('jshkaj')
     window.addEventListener('click', uwu)
 })
 </script>
 <template>
-    <section :class="prop.view ? 'down' : 'up'">
-        <ul class="kanit-medium">
+    <section id="sect" :class="prop.view ? 'down' : 'up'">
+        <ul @click="showDinamic" class="kanit-medium">
             <router-link to="/">Home</router-link>
             <router-link to="/about">About Us</router-link>
             <router-link to="/support">Support</router-link>

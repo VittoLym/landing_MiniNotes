@@ -37,11 +37,9 @@ function dw(){
 function showNav(){
     console.log(view.value)
     if(view.value === true){
-        console.log('gis')
         view.value = false
     }
     else{
-        console.log('hwuei')
         view.value = true
     }
 }
