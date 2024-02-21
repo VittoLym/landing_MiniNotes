@@ -1,11 +1,12 @@
 <script setup>
 import { onBeforeMount,onMounted, ref } from 'vue';
+import Apk from '@/assets/app-release.apk'
 import MyAside from '@/components/MyAside.vue';
 const mobile = ref(null)
 
 function donwloadApk(){
     let nc = document.createElement('a');
-    nc.href = '@/assets/app-release.apk'
+    nc.href =  Apk
     nc.download = 'MiniNotes.apk'
     nc.target = '_blank'
     nc.click()

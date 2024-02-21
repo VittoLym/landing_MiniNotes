@@ -1,10 +1,11 @@
 <script setup>
 import { onMounted, onBeforeUnmount} from 'vue';
+import Apk from '@/assets/app-release.apk'
 const prop = defineProps(['view'])
 console.log(prop.view)
 const dw = () =>{
     let nc = document.createElement('a');
-    nc.href = '@/assets/app-release.apk'
+    nc.href = Apk
     nc.download = 'MiniNotes.apk'
     nc.target = '_blank'
     nc.click()
