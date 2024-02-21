@@ -63,7 +63,6 @@ span{
   width: 50vw;
 }
 article{
-  background-color: var(--bg-t);
   height: 90vh;
   width: 100%;
   display: flex;
