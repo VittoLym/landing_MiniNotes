@@ -1,5 +1,9 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import Img from '@/assets/image/vittonesa.jpeg'
+import MyAside from '@/components/MyAside.vue';
+const mobile = ref(true)
+
 function donwloadApk(){
     let nc = document.createElement('a');
     nc.href = Img
@@ -8,7 +12,18 @@ function donwloadApk(){
     nc.click()
     console.log('se descargo')
 }
-
+function sizing(){
+  const width =ref(window.innerWidth)
+  if(width.value <= 800){
+    mobile.value = true
+  }
+  else{
+    mobile.value = false
+  }
+}
+onMounted(()=>{
+  window.addEventListener('resize', sizing)
+})
 </script>
 
 <template>
@@ -28,6 +43,7 @@ function donwloadApk(){
       <button class="kanit-medium" @click="donwloadApk">Download</button>
     </article>
   </main>
+  <MyAside v-if="mobile"/>
 </template>
 <style scoped>
 main{
@@ -90,5 +106,35 @@ button:hover{
 }
 button:active{
   scale: 1;
+}
+
+@media screen and (max-width: 700px) { 
+  main{
+    background-image: url(../assets/image/mockup_mininote.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: max-content;
+  }
+  img{
+    display: none;
+  }
+  h1{
+    display: none
+  }
+  article{
+    height: 80vh;
+    justify-content: end;
+  }
+  article p{
+    color: var(--color-heading);
+  }
+  p{
+    display: none;
+  }
+  button{
+    width: min-content;
+    padding: 0 1rem;
+  }
 }
 </style>

@@ -128,7 +128,7 @@ ul a:hover{
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
     nav{
         padding: 1rem 0;
         justify-content: end;
