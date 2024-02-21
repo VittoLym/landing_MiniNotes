@@ -1,5 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
+  --i-url-white:'../assets/image/mockup_mininote.png';
   --c-bg-t-white:#e2e2e24b;
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -13,7 +14,8 @@
   --v-c-bc-dark:#313131;
 
   --vt-c-indigo: #2c3e50;
-
+ 
+  --i-url-dark:'../assets/image/mockup_mininotes.png';
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -27,6 +29,7 @@
 
 /* semantic color variables for this project */
 :root {
+  --i-bg:var(--i-url-white);
   --bg-t:var(--c-bg-t-white);
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
@@ -43,6 +46,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --i-bg:var(--i-url-dark);
     --bg-t:var(--c-bg-t-dark);
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);

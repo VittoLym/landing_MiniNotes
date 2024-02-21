@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onBeforeMount,onMounted, ref } from 'vue';
 import Img from '@/assets/image/vittonesa.jpeg'
 import MyAside from '@/components/MyAside.vue';
-const mobile = ref(true)
+const mobile = ref(null)
 
 function donwloadApk(){
     let nc = document.createElement('a');
@@ -21,6 +21,9 @@ function sizing(){
     mobile.value = false
   }
 }
+onBeforeMount(()=>{
+  sizing()
+})
 onMounted(()=>{
   window.addEventListener('resize', sizing)
 })
@@ -29,7 +32,7 @@ onMounted(()=>{
 <template>
   <main>
     <img id="img" src="../assets/image/mockup_mininote.png" alt="">
-    <article >
+    <article id="article">
       <h1 class="kanit-medium">Mini Notes<span>.Beta</span></h1>
       <p>
         The minimalist notes app offers a simple and elegant note-taking experience, with a distraction-free interface.
