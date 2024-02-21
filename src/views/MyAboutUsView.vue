@@ -7,15 +7,15 @@
       <article id="article">
         <h1 class="kanit-medium">About Us</h1>
         <p>
-          The minimalist notes app offers a simple and elegant note-taking experience, with a distraction-free interface.
+            Staff Lym is a passionate team of designers and developers committed to creating simple and effective tools to improve your productivity.
         </p>
         <p>
-          It is perfectly suited for those looking for a hassle-free tool to manage their thoughts effectively.
+            We strive to provide you with intuitive solutions that integrate seamlessly into your everyday life.        
         </p>
         <p>
-          It allows users to quickly capture ideas and organize them intuitively with tags and categories.
+            Mini Notes was born from the idea of ​​offering a minimalist notes app that is easy to use, yet powerful in its functionality.        
         </p>
-      </article>
+    </article>
     </main>
 </template>
 <style scoped>
@@ -58,6 +58,7 @@ h1{
 article p{
   width: 80%;
   font-size: 1.2rem;
+  margin: .2rem 0;
 }
 button{
   margin-top: 2rem;

@@ -86,6 +86,7 @@ h1{
 article p{
   width: 80%;
   font-size: 1.2rem;
+  margin: .4rem 0;
 }
 button{
   margin-top: 2rem;
