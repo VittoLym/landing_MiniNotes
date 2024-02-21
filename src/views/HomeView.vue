@@ -43,7 +43,7 @@ onMounted(()=>{
       <p>
         It allows users to quickly capture ideas and organize them intuitively with tags and categories.
       </p>
-      <button class="kanit-medium" @click="donwloadApk">Download</button>
+      <button class="kanit-medium button" @click="donwloadApk">Download</button>
     </article>
   </main>
   <MyAside v-if="mobile"/>
@@ -88,7 +88,7 @@ article p{
   font-size: 1.2rem;
   margin: .4rem 0;
 }
-button{
+.button{
   margin-top: 2rem;
   height: 10vh;
   width: 15vw;
@@ -101,7 +101,7 @@ button{
   cursor: pointer;
   box-shadow: 4px 4px 2px var(--color-heading);
 }
-button:hover{
+.button:hover{
   box-shadow: 4px 4px 2px #0c0c0c50;
   background-color: var(--color-heading);
   color: var(--color-bc-text);
