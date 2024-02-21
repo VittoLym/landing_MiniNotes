@@ -1,13 +1,15 @@
 <script setup>
+/* import appReleaseApk from '!!file-loader!../assets/app-release.apk'; */
 import { ref } from 'vue';
 import { RouterLink} from 'vue-router'
+import Apk from '@/assets/app-release.apk'
 import MyNav from './MyNav.vue';
 
 const view = ref(false)
 
 function dw(){
     let nc = document.createElement('a');
-    nc.href = '../assets/app-release.apk'
+    nc.href = Apk
     nc.download = 'MiniNotes.apk'
     nc.target = '_blank'
     nc.click()
