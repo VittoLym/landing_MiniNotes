@@ -5,7 +5,7 @@ console.log(prop.view)
 const dw = () =>{
     let nc = document.createElement('a');
     nc.href = '@/assets/app-release.apk'
-    nc.download = 'Mini Notes.apk'
+    nc.download = 'MiniNotes.apk'
     nc.target = '_blank'
     nc.click()
     console.log('se descargo')
