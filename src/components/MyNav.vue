@@ -1,8 +1,8 @@
 <script setup>
-import { onUpdated } from 'vue';
+import { onMounted, onBeforeUnmount} from 'vue';
 const prop = defineProps(['view'])
+console.log(prop.view)
 const uwu = () =>{
-    
     if(prop.view === true){
         document.body.classList.add('scroll-lock')
     }
@@ -15,8 +15,11 @@ const showDinamic = () => {
     sect.classList.remove('down')
     sect.classList.add('up')
 }
-onUpdated(()=>{
+onMounted(()=>{
     window.addEventListener('click', uwu)
+})
+onBeforeUnmount(()=>{
+    window.removeEventListener('click', uwu)
 })
 </script>
 <template>

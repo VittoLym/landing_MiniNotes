@@ -1,30 +1,11 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink} from 'vue-router'
-import { onMounted, onBeforeUnmount ,ref } from 'vue';
 import MyNav from './MyNav.vue';
 
 import Img from '@/assets/image/vittonesa.jpeg'
 
-
-const anchoTotal = ref(window.innerWidth);
-const view = ref( false)
-function changeView(){
-  anchoTotal.value = window.innerWidth;
-  if(anchoTotal.value <= 800){
-    view.value = true
-  }
-  if(anchoTotal.value >= 800){
-    view.value = false
-  }
-}
-
-onMounted(()=>{
-  window.addEventListener('resize', changeView)
-})
-
-onBeforeUnmount(() =>{
-  window.removeEventListener('resize', changeView)
-})
+const view = ref(false)
 
 function dw(){
     let nc = document.createElement('a');
@@ -35,7 +16,6 @@ function dw(){
     console.log('se descargo')
 }
 function showNav(){
-    console.log(view.value)
     if(view.value === true){
         view.value = false
     }
