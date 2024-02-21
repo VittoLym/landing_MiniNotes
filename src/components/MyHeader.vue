@@ -38,6 +38,11 @@ function showNav(){
         <MyNav  :view="view"/>
 </template>
 <style scoped>
+
+nav >>> a.router-link-exact-active {
+    color: var(--color-heading);
+    background-color:  var(--color-bc-text);
+}
 .kanit-medium {
     font-family: "kanit", sans-serif;
     font-weight: 500;

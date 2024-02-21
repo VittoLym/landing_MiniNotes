@@ -1,11 +1,10 @@
 <script setup>
-
 </script>
 <template>
     <main>
-      <img id="img" src="../assets/image/mockup2.png" alt="">
+      <img id="img" src="../assets/image/mockup3.png" alt="">
       <article id="article">
-        <h1 class="kanit-medium">About Us</h1>
+        <h1 class="kanit-medium">Support</h1>
         <p>
             Mini Notes was born from the idea of offering a minimalist notes app that is easy to use, yet powerful in its functionality.        
         </p>
@@ -21,7 +20,7 @@
 <style scoped>
 main{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   height: 90vh;
 }
 .kanit-medium {
@@ -57,7 +56,7 @@ h1{
 article p{
   width: 80%;
   font-size: 1.2rem;
-  margin: .2rem 0;
+  margin: .4rem 0;
 }
 button{
   margin-top: 2rem;
