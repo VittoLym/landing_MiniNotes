@@ -65,12 +65,12 @@ span{
   height: 80vh;
   width: 50vw;
 }
-article{
-  height: 90vh;
+#article{
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   text-wrap: pretty;
 }
