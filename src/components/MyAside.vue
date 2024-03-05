@@ -24,12 +24,14 @@
 }
 
 article{
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 100%;
-    margin-bottom: 5vh;
+    height: 70vh;
+    margin-bottom: 15vh;
 }
 h1{
     width: 80%;

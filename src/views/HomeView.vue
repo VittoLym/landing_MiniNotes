@@ -126,11 +126,11 @@ button:active{
   h1{
     display: none
   }
-  article{
+  #article{
     height: 80vh;
     justify-content: end;
   }
-  article p{
+  #article p{
     color: var(--color-heading);
   }
   p{
