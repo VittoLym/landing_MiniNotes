@@ -91,7 +91,8 @@ article p{
 .button{
   margin-top: 2rem;
   height: 10vh;
-  width: 15vw;
+  width: max-content;
+  padding: 0 2rem;
   font-size: 1.7rem;
   border-radius: .8rem;
   border: none;
