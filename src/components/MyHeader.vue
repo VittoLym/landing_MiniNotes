@@ -15,6 +15,10 @@ function dw(){
     nc.click()
     console.log('se descargo')
 }
+function changeValueView(view2){
+    view.value = view2.value;
+}
+
 function showNav(){
     if(view.value === true){
         view.value = false
@@ -35,7 +39,7 @@ function showNav(){
         </ul>
         <svg @click="showNav" fill="#fff" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1920 1468.412v112.94H0v-112.94h1920Zm0-564.706v112.941H0V903.706h1920ZM1920 339v112.941H0V339h1920Z" fill-rule="evenodd"></path> </g></svg>
     </nav>
-        <MyNav  :view="view"/>
+        <MyNav  :view="view" @view2="changeValueView"/>
 </template>
 <style scoped>
 
@@ -127,4 +131,4 @@ ul a:hover{
         margin-right: 1.3rem;
     }
 }
-</style>
+</style>./MyHomeRes.vue

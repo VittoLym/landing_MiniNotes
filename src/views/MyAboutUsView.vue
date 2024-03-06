@@ -1,4 +1,22 @@
 <script setup>
+import { ref, onBeforeMount, onMounted } from 'vue'
+import MyAboutResponsive from '@/components/MyAboutResponsive.vue'
+const res = ref(null)
+function sizing(){
+    const width =ref(window.innerWidth)
+    if(width.value <= 800){
+        res.value = true
+    }
+    else{
+        res.value = false
+    }
+}
+onBeforeMount(()=>{
+    sizing() 
+})
+onMounted(()=>{
+    window.addEventListener('resize', sizing)
+})
 
 </script>
 <template>
@@ -17,6 +35,7 @@
         </p>
     </article>
     </main>
+    <MyAboutResponsive if="res"/>
 </template>
 <style scoped>
 main{
@@ -84,11 +103,12 @@ button:active{
 
 @media screen and (max-width: 700px) { 
   main{
-    background-image: url(../assets/image/mockup_mininote.png);
+    background-image: url(../assets/image/mockup2res.png);
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
-    height: max-content;
+    height: 60vh;
+    margin: 2rem 0;
   }
   img{
     display: none;
@@ -97,7 +117,7 @@ button:active{
     display: none
   }
   article{
-    height: 80vh;
+    height: 75vh;
     justify-content: end;
   }
   article p{
@@ -111,4 +131,4 @@ button:active{
     padding: 0 1rem;
   }
 }
-</style>
+</style>import MyAboutResponsiveVue from '@/components/MyAboutResponsive.vue';

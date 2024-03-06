@@ -1,8 +1,9 @@
 <script setup>
-import { onMounted, onBeforeUnmount} from 'vue';
+import { onMounted, onBeforeUnmount, ref, defineEmits } from 'vue';
 import Apk from '@/assets/app-release.apk'
 const prop = defineProps(['view'])
-console.log(prop.view)
+const emit = defineEmits(['view2'])
+const view2 = ref(null)
 const dw = () =>{
     let nc = document.createElement('a');
     nc.href = Apk
@@ -12,8 +13,9 @@ const dw = () =>{
     console.log('se descargo')
 }
 
-const uwu = () =>{
-    if(prop.view === true){
+const blockScroll = () =>{
+    view2.value = prop.view
+    if(view2.value === true){
         document.body.classList.add('scroll-lock')
     }
     else{
@@ -21,19 +23,22 @@ const uwu = () =>{
     }
 }
 const showDinamic = () => {
+    view2.value = false
+    emit('view2', view2)
+
     const sect = window.document.getElementById('sect')
     sect.classList.remove('down')
     sect.classList.add('up')
 }
 onMounted(()=>{
-    window.addEventListener('click', uwu)
+    window.addEventListener('click', blockScroll)
 })
 onBeforeUnmount(()=>{
-    window.removeEventListener('click', uwu)
+    window.removeEventListener('click', blockScroll)
 })
 </script>
 <template>
-    <section id="sect" :class="prop.view ? 'down' : 'up'">
+    <section id="sect" :class="view2 ? 'down' : 'up'">
         <ul @click="showDinamic" class="kanit-medium">
             <router-link to="/">Home</router-link>
             <router-link to="/about">About Us</router-link>
@@ -84,4 +89,4 @@ ul a:hover{
     height: 100vh;
     opacity: 1;
 }
-</style>
+</style>, onUnmounted, onUnmounted

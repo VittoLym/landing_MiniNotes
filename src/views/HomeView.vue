@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeMount,onMounted, ref } from 'vue';
 import Apk from '@/assets/app-release.apk'
-import MyAside from '@/components/MyAside.vue';
+import MyAside from '@/components/MyAsideRes.vue';
 const mobile = ref(null)
 
 function donwloadApk(){
